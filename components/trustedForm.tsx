@@ -191,7 +191,7 @@ function App() {
   );
 
   return (
-    <div className="min-h-screen bg-transparent flex items-center justify-center p-4 font-inter">
+    <div className="min-h-auto bg-transparent flex items-center justify-center p-4 lg:pt-[40px] pt-[20px] font-inter">
       <div className="bg-white rounded-xl shadow-lg p-6 sm:p-8 md:p-10 max-w-md w-full">
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 text-center mb-2">
           Request A Proposal
