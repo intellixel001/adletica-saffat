@@ -1,52 +1,138 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
-const HeroSectionTop: React.FC = () => {
+const slides = [
+  {
+    id: 1,
+    label: "Digital Growth",
+    heading: "Unlock Your Business Potential",
+    button: "Start Now",
+    link: "/services",
+  },
+  {
+    id: 2,
+    label: "Marketing Insights",
+    heading: "Smarter Campaigns, Bigger Impact",
+    button: "Learn More",
+    link: "/blog",
+  },
+  {
+    id: 3,
+    label: "Creative Solutions",
+    heading: "Design That Inspires Action",
+    button: "Explore Design",
+    link: "/services/design",
+  },
+  {
+    id: 4,
+    label: "Conversion Optimization",
+    heading: "Turn Visitors Into Loyal Customers",
+    button: "See How",
+    link: "/results",
+  },
+  {
+    id: 5,
+    label: "Future Trends",
+    heading: "Stay Ahead With Expert Insights",
+    button: "Read Articles",
+    link: "/blog",
+  },
+];
+
+const HeroSlider: React.FC = () => {
+  const [current, setCurrent] = useState(0);
+
+  // Auto slide every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const nextSlide = () => setCurrent((prev) => (prev + 1) % slides.length);
+  const prevSlide = () =>
+    setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+
   return (
-    <section className="relative bg-gradient-to-br from-[#0dcaf0] via-white to-white overflow-hidden">
-      <div className="container px-3 lg:px-[100px] mx-auto lg:py-[40px] py-[20px] flex flex-col lg:flex-row items-center justify-between">
-        {/* Left Text Content */}
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center lg:text-left lg:max-w-xl"
-        >
-          <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 leading-tight">
-            Insights That <span className="text-[#0dcaf0]">Fuel Growth</span>
-          </h1>
-          <p className="mt-6 text-lg text-gray-700">
-            Explore actionable strategies, expert stories, and trends shaping
-            the future of digital growth. Updated weekly with real-world
-            insights.
-          </p>
-          <Link
-            href="#latest-articles"
-            className="mt-8 inline-block px-8 py-3 bg-black text-white font-semibold rounded-full shadow hover:bg-gray-800 transition duration-300"
-          >
-            Browse Articles
-          </Link>
-        </motion.div>
+    <section className="relative h-[100vh] flex items-center justify-center overflow-hidden">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source
+          src="https://media.istockphoto.com/id/979944750/video/startup-company-meeting.mp4?s=mp4-640x640-is&k=20&c=S6LoYX_yCQimFJUm_zBJxzd-5BvG1rHvKWN9av1lAc8="
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
 
-        {/* Right Hero Image */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-12 lg:mt-0"
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50 z-10" />
+
+      {/* Slider Content */}
+      <div className="relative z-20 container mx-auto">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={slides[current].id}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            transition={{ duration: 0.6 }}
+            className="text-center text-white"
+          >
+            <p className="uppercase tracking-widest text-sm text-gray-300 mb-4">
+              {slides[current].label}
+            </p>
+            <h1 className="text-4xl sm:text-6xl font-bold leading-tight mb-6">
+              {slides[current].heading}
+            </h1>
+            <Link
+              href={slides[current].link}
+              className="inline-block px-8 py-3 bg-[#0dcaf0] text-white font-semibold rounded-full shadow hover:bg-cyan-500 transition duration-300"
+            >
+              {slides[current].button}
+            </Link>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Navigation Arrows */}
+        <button
+          onClick={prevSlide}
+          className="absolute top-1/2 left-6 transform -translate-y-1/2 bg-white/30 hover:bg-white/60 text-white rounded-full p-3 shadow-lg transition"
         >
-          <img
-            src="https://s3.eu-west-2.amazonaws.com/growthcurve.site/media/blog/_blogThumbRectangle/62756/pay-for-intent-not-clicks-hero-image_2025-07-02-140639_svsl.webp"
-            alt="Hero Visual"
-            className="rounded-3xl shadow-lg max-w-full w-[500px] h-auto"
-          />
-        </motion.div>
+          <ChevronLeft className="h-6 w-6" />
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute top-1/2 right-6 transform -translate-y-1/2 bg-white/30 hover:bg-white/60 text-white rounded-full p-3 shadow-lg transition"
+        >
+          <ChevronRight className="h-6 w-6" />
+        </button>
+
+        {/* Dots */}
+        <div className="flex justify-center gap-2 mt-8">
+          {slides.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrent(idx)}
+              className={`w-3 h-3 rounded-full transition-all ${
+                current === idx ? "bg-[#0dcaf0]" : "bg-gray-400"
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
 };
 
-export default HeroSectionTop;
+export default HeroSlider;

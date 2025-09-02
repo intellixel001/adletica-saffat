@@ -144,7 +144,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <section aria-label="Hero Section" className="lg:pt-[90px] pt-[20px]">
+        <section aria-label="Hero Section">
           <HeroSectionTop />
         </section>
 

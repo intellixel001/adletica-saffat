@@ -181,19 +181,24 @@ const HeroSection: React.FC = () => {
 
         {/* VIDEO RIGHT AREA */}
         <motion.div
-          className="relative w-full h-96 md:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden shadow-xl"
+          className="relative w-full h-auto rounded-3xl overflow-hidden shadow-xl"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.4 }}
         >
-          <video
+          <img
+            src="/image/hero/alexander-grey--8a5eJ1-mmQ-unsplash.jpg"
+            alt="Hero Visual"
+            className="rounded-3xl shadow-lg w-full h-auto"
+          />
+          {/* <video
             src="https://www.w3schools.com/html/mov_bbb.mp4"
             loop
             autoPlay
             muted={isMuted}
             className="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
-          />
-          <button
+          /> */}
+          {/* <button
             onClick={() => setIsMuted(!isMuted)}
             className="absolute bottom-4 right-4 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all duration-300 z-10"
             aria-label={isMuted ? "Unmute video" : "Mute video"}
@@ -203,26 +208,31 @@ const HeroSection: React.FC = () => {
             ) : (
               <VolumeUpIcon className="h-6 w-6" />
             )}
-          </button>
+          </button> */}
         </motion.div>
       </div>
 
       {/* SECONDARY SECTION */}
       <div className="container px-4 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center  lg:py-[40px] py-[20px]">
         <motion.div
-          className="relative w-full h-96 md:h-[500px] lg:h-[600px] rounded-lg overflow-hidden shadow-xl"
+          className="relative w-full h-auto rounded-lg overflow-hidden shadow-xl"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5 }}
         >
-          <video
+          <img
+            src="/image/hero/tim-gouw-1K9T5YiZ2WU-unsplash.jpg"
+            alt="Hero Visual"
+            className="rounded-3xl shadow-lg w-full h-auto"
+          />
+          {/* <video
             src="https://www.w3schools.com/html/mov_bbb.mp4"
             loop
             autoPlay
             muted={isMuted}
             className="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
-          />
-          <button
+          /> */}
+          {/* <button
             onClick={() => setIsMuted(!isMuted)}
             className="absolute bottom-4 right-4 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all duration-300 z-10"
           >
@@ -231,7 +241,7 @@ const HeroSection: React.FC = () => {
             ) : (
               <VolumeUpIcon className="h-6 w-6" />
             )}
-          </button>
+          </button> */}
         </motion.div>
 
         <motion.div

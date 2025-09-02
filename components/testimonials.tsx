@@ -55,8 +55,7 @@ const App: React.FC = () => {
     {
       id: 1,
       type: "person",
-      image:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=300&h=400&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/image/testimonials/portrait-businessman-smiling.png",
       logo: "P",
       logoBg: "bg-red-500",
       stars: 5,
