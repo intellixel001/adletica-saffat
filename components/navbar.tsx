@@ -1,5 +1,6 @@
 "use client";
 
+import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
@@ -35,10 +36,10 @@ const App = () => {
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
           isScrolled
             ? "bg-white shadow-md text-gray-900"
-            : "bg-transparent text-white"
+            : "bg-black/50 text-white"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center text-2xl font-extrabold">
             <svg
@@ -69,9 +70,110 @@ const App = () => {
             <Link href="/results" className="hover:text-blue-600 text-lg">
               Results
             </Link>
-            <Link href="/services" className="hover:text-blue-600 text-lg">
-              Services
-            </Link>
+
+            {/* Services with dropdown */}
+            <div className="relative group">
+              <Link
+                href={"/services"}
+                className="flex items-center space-x-1 text-lg hover:text-blue-600"
+              >
+                <span>Services</span>
+                <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
+              </Link>
+
+              {/* Dropdown */}
+              <div className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50">
+                <ul className="py-2 text-gray-700">
+                  <li>
+                    <Link
+                      href="/services/social-media"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Social Media Marketing
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      href="/services/facebook-instagram-ads"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Facebook & Instagram Ads
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      href="/services/seo"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Search Engine Optimization (SEO)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/services/google-ads"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Google Advertising
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      href="/services/ppc"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Pay Per Click Advertising
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      href="/services/graphic-design"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      graphic-design
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      href="/services/ecommerce"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Ecommerce Marketing
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/services/video-marketing"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Video Marketing
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/services/content-writing"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Content Writing
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      href="/services/web-design"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Website Design & Development
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
             <Link href="/blog" className="hover:text-blue-600 text-lg">
               Blog
             </Link>

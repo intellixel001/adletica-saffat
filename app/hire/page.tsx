@@ -34,7 +34,7 @@ function App() {
                 strokeLinejoin="round"
               />
             </svg>
-            <span className="text-2xl font-bold">Growthcurve</span>
+            <span className="text-2xl font-bold">adletica</span>
           </div>
 
           {/* Feature List */}
@@ -118,7 +118,7 @@ function App() {
                   Scale up growth flexibly
                 </h3>
                 <p className="text-blue-200">
-                  Adjust your Growthcurve team up and down with ease.
+                  Adjust your adletica team up and down with ease.
                 </p>
               </div>
             </div>

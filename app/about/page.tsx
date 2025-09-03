@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image"; // Required for Next.js image optimization
 import TrustedForm from "../../components/trustedForm";
+import PageHeader from "@/components/PageHeader";
+import OurServicesSection from "@/components/OurServicesSection";
 
 // Define AboutData interface
 interface AboutData {
@@ -28,25 +30,25 @@ interface AboutData {
 const aboutData: AboutData = {
   title: "About Us",
   subtitle:
-    "We’re an elite team of creatives, engineers, hackers and quants – changing the way companies grow.",
+    "At Adletica, we love helping brands shine online. Every business has its own story, and we’re here to make sure yours reaches the right people in the right way.",
   topImages: [
-    "https://s3.euh-west-2.amazonaws.com/growthcurve.site/media/site/headers/_308x479_crop_center-center_none/27063/pan-2.webp",
-    "https://s3.eu-west-2.amazonaws.com/growthcurve.site/media/site/headers/_308x479_crop_center-center_none/27063/pan-2.webp",
+    "https://s3.euh-west-2.amazonaws.com/adletica.site/media/site/headers/_308x479_crop_center-center_none/27063/pan-2.webp",
+    "https://s3.eu-west-2.amazonaws.com/adletica.site/media/site/headers/_308x479_crop_center-center_none/27063/pan-2.webp",
   ],
   middleSection: {
     title: "The team behind some of the world’s fastest growing brands",
-    text: "Growthcurve® is an elite team of digital marketers, media strategists, designers, data scientists and developers.",
+    text: "adletica® is an elite team of digital marketers, media strategists, designers, data scientists and developers.",
     image:
-      "https://s3.eu-west-2.amazonaws.com/growthcurve.site/media/content/_640x640_crop_center-center_none/26733/adobest.webp",
+      "https://s3.eu-west-2.amazonaws.com/adletica.site/media/content/_640x640_crop_center-center_none/26733/adobest.webp",
   },
   bottomSection: {
-    title: "Why is Growthcurve Special?",
+    title: "Why is adletica Special?",
     text: "We embed a tailored team of highly experienced marketing experts into your business based on your unique growth objectives...",
     image:
-      "https://s3.eu-west-2.amazonaws.com/growthcurve.site/media/content/_640x640_crop_center-center_none/26804/KS009811.webp",
+      "https://s3.eu-west-2.amazonaws.com/adletica.site/media/content/_640x640_crop_center-center_none/26804/KS009811.webp",
   },
   missionSection: {
-    title: "Why is Growthcurve Special?",
+    title: "Why is adletica Special?",
     text: "We embed a tailored team of highly experienced marketing experts into your business based on your unique growth objectives...",
     image: "http://www.w3.org/2000/svg",
   },
@@ -78,34 +80,19 @@ const App: React.FC = () => {
   return (
     <div>
       {/* ABOUT SECTION */}
-      <section className="px-4 sm:px-8 md:px-16 lg:px-24 py-25 bg-white text-[#0c0c0c]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div className="text-left mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              {data.title}
-            </h2>
-            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-              {data.subtitle}
-            </p>
-          </div>
+      <PageHeader
+        bgImage={"/image/allpages/aboutus.jpeg"}
+        description=" At Adletica, we love helping brands shine online. Every business
+              has its own story, and we’re here to make sure yours reaches the
+              right people in the right way."
+        title="About Us"
+      />
 
-          {/* Top Images */}
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
-            {data.topImages.map((img, i) => (
-              <div key={i} className="w-[calc(50%-0.5rem)] max-w-[280px]">
-                <Image
-                  src={img}
-                  alt={`Top Image ${i + 1}`}
-                  width={600}
-                  height={400}
-                  className="rounded-lg w-full h-auto object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+      <OurServicesSection />
+
+      <div className="container mx-auto">
         {/* Middle Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-[20px] lg:py-[40px]">
           <div className="order-1 md:order-none">
             <Image
               src={data.middleSection.image}
@@ -126,7 +113,7 @@ const App: React.FC = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-[20px] lg:py-[40px]">
           <div>
             <h3 className="text-xl md:text-2xl font-bold mb-4">
               {data.bottomSection.title}
@@ -146,7 +133,7 @@ const App: React.FC = () => {
           </div>
         </div>
         {/* Our Mission Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-[20px] lg:py-[40px]">
           <div>
             <svg
               xmlns={data.bottomSection.image}
@@ -164,10 +151,10 @@ const App: React.FC = () => {
             </p>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* FORM SECTION */}
-      <div className="min-h-screen bg-blue-900 flex flex-col items-center justify-center p-4 font-inter">
+      <div className="bg-gradient-to-t from-gray-900 to-transparent flex flex-col items-center justify-center p-4 font-inter">
         <div className="bg-transparent w-full">
           {/* Progress Stepper */}
 
@@ -176,7 +163,7 @@ const App: React.FC = () => {
         </div>
 
         {/* Placeholder for company logos */}
-        <div className="w-full max-w-5xl px-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-8 opacity-70">
+        {/* <div className="w-full max-w-5xl px-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-8 opacity-70">
           {Array.from({ length: 24 }).map((_, index) => (
             <div
               key={index}
@@ -187,7 +174,7 @@ const App: React.FC = () => {
               </span>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

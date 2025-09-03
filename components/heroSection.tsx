@@ -81,7 +81,7 @@ const HeroSection: React.FC = () => {
 
   return (
     <section className="w-full bg-white font-sans">
-      <div className="container px-4 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center  lg:py-[40px] py-[20px]">
+      <div className="container px-4 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start  lg:py-[40px] py-[20px]">
         {/* LEFT TEXT AREA */}
         <motion.div
           className="space-y-6"
@@ -129,7 +129,7 @@ const HeroSection: React.FC = () => {
             ].map((text, index) => (
               <motion.div
                 key={index}
-                className="flex items-center text-base sm:text-lg"
+                className="flex items-start text-base sm:text-lg"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
               >
@@ -141,16 +141,25 @@ const HeroSection: React.FC = () => {
 
           {/* BUTTON */}
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Link
+                href="/hire"
+                className="inline-flex items-center px-6 py-3 border-blue-600 border-2 bg-white text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-lg text-4xl sm:text-lg cursor-pointer"
+              >
+                Start Growing Today <ArrowRightIcon className="ml-2 w-5 h-5" />
+              </Link>
+            </motion.div>
+            {/* 
             <Link
               href="/hire"
               className="inline-flex items-center px-6 py-3 border-blue-600 border-2 bg-white text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-lg lg:text-4xl text-xl sm:text-lg cursor-pointer"
             >
               Start Growing Today <ArrowRightIcon className="ml-2 w-5 h-5" />
-            </Link>
+            </Link> */}
           </motion.div>
 
           {/* LOGO CAROUSEL */}
-          <div className="mt-6 overflow-hidden">
+          {/* <div className="mt-6 overflow-hidden">
             <motion.div
               ref={carouselRef}
               className="flex items-center"
@@ -171,12 +180,12 @@ const HeroSection: React.FC = () => {
                 </motion.div>
               ))}
             </motion.div>
-          </div>
+          </div> */}
 
-          <div className="mt-4 text-sm sm:text-base text-gray-600">
+          {/* <div className="mt-4 text-sm sm:text-base text-gray-600">
             Reviewed on <span className="font-bold text-black">Clutch</span> – 5
             STAR AGENCY
-          </div>
+          </div> */}
         </motion.div>
 
         {/* VIDEO RIGHT AREA */}
@@ -213,7 +222,7 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* SECONDARY SECTION */}
-      <div className="container px-4 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center  lg:py-[40px] py-[20px]">
+      <div className="container px-4 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start lg:py-[40px] py-[20px]">
         <motion.div
           className="relative w-full h-auto rounded-lg overflow-hidden shadow-xl"
           initial={{ opacity: 0, scale: 0.95 }}

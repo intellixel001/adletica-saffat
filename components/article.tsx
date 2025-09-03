@@ -25,19 +25,19 @@ interface Article {
 
 const articleImages: { [key: string]: string } = {
   "Pay for Intent":
-    "https://s3.eu-west-2.amazonaws.com/growthcurve.site/media/blog/_blogThumbRectangle/62756/pay-for-intent-not-clicks-hero-image_2025-07-02-140639_svsl.webp",
+    "https://s3.eu-west-2.amazonaws.com/adletica.site/media/blog/_blogThumbRectangle/62756/pay-for-intent-not-clicks-hero-image_2025-07-02-140639_svsl.webp",
   "How a AppLovin Hijacked":
-    "https://s3.eu-west-2.amazonaws.com/growthcurve.site/media/blog/_blogThumbRectangle/62756/pay-for-intent-not-clicks-hero-image_2025-07-02-140639_svsl.webp",
+    "https://s3.eu-west-2.amazonaws.com/adletica.site/media/blog/_blogThumbRectangle/62756/pay-for-intent-not-clicks-hero-image_2025-07-02-140639_svsl.webp",
   "What Attio Teaches Us":
-    "https://s3.eu-west-2.amazonaws.com/growthcurve.site/media/blog/_blogThumbRectangle/62756/pay-for-intent-not-clicks-hero-image_2025-07-02-140639_svsl.webp",
+    "https://s3.eu-west-2.amazonaws.com/adletica.site/media/blog/_blogThumbRectangle/62756/pay-for-intent-not-clicks-hero-image_2025-07-02-140639_svsl.webp",
   "The Playbook that Fueled":
-    "https://s3.eu-west-2.amazonaws.com/growthcurve.site/media/blog/_blogThumbRectangle/62756/pay-for-intent-not-clicks-hero-image_2025-07-02-140639_svsl.webp",
+    "https://s3.eu-west-2.amazonaws.com/adletica.site/media/blog/_blogThumbRectangle/62756/pay-for-intent-not-clicks-hero-image_2025-07-02-140639_svsl.webp",
   "Data-Driven Decisions":
-    "https://s3.eu-west-2.amazonaws.com/growthcurve.site/media/blog/_blogThumbRectangle/62756/pay-for-intent-not-clicks-hero-image_2025-07-02-140639_svsl.webp",
+    "https://s3.eu-west-2.amazonaws.com/adletica.site/media/blog/_blogThumbRectangle/62756/pay-for-intent-not-clicks-hero-image_2025-07-02-140639_svsl.webp",
   "The Future of AI":
-    "https://s3.eu-west-2.amazonaws.com/growthcurve.site/media/blog/_blogThumbRectangle/62756/pay-for-intent-not-clicks-hero-image_2025-07-02-140639_svsl.webp",
+    "https://s3.eu-west-2.amazonaws.com/adletica.site/media/blog/_blogThumbRectangle/62756/pay-for-intent-not-clicks-hero-image_2025-07-02-140639_svsl.webp",
   "Mastering React Hooks":
-    "https://s3.eu-west-2.amazonaws.com/growthcurve.site/media/blog/_blogThumbRectangle/62756/pay-for-intent-not-clicks-hero-image_2025-07-02-140639_svsl.webp",
+    "https://s3.eu-west-2.amazonaws.com/adletica.site/media/blog/_blogThumbRectangle/62756/pay-for-intent-not-clicks-hero-image_2025-07-02-140639_svsl.webp",
 };
 
 const articles: Article[] = [
@@ -51,7 +51,7 @@ const articles: Article[] = [
     tags: ["Intent-based Marketing", "Pay Per Click"],
     image: articleImages["Pay for Intent"],
     authorImage:
-      "https://s3.eu-west-2.amazonaws.com/growthcurve.site/media/blog/_blogThumbRectangle/62756/pay-for-intent-not-clicks-hero-image_2025-07-02-140639_svsl.webp",
+      "https://s3.eu-west-2.amazonaws.com/adletica.site/media/blog/_blogThumbRectangle/62756/pay-for-intent-not-clicks-hero-image_2025-07-02-140639_svsl.webp",
   },
   {
     title: "How a AppLovin Hijacked Billions in App-Install Spend from Google",

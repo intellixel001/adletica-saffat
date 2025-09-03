@@ -197,7 +197,7 @@ function App() {
         <div className="flex flex-wrap justify-center gap-4 mb-16">
           <div className="w-[calc(50%-0.5rem)] max-w-[280px]">
             <img
-              src="https://s3.eu-west-2.amazonaws.com/growthcurve.site/media/site/headers/_308x479_crop_center-center_none/27063/pan-2.webp"
+              src="https://s3.eu-west-2.amazonaws.com/adletica.site/media/site/headers/_308x479_crop_center-center_none/27063/pan-2.webp"
               alt="Service"
               width={600}
               height={400}
@@ -206,7 +206,7 @@ function App() {
           </div>
           <div className="w-[calc(50%-0.5rem)] max-w-[280px]">
             <img
-              src="https://s3.eu-west-2.amazonaws.com/growthcurve.site/media/site/headers/_308x479_crop_center-center_none/27063/pan-2.webp"
+              src="https://s3.eu-west-2.amazonaws.com/adletica.site/media/site/headers/_308x479_crop_center-center_none/27063/pan-2.webp"
               alt="Service"
               width={600}
               height={400}
