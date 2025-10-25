@@ -92,8 +92,8 @@ const App: React.FC = () => {
 
       <div className="container mx-auto">
         {/* Middle Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-[20px] lg:py-[40px]">
-          <div className="order-1 md:order-none">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center ">
+          <div className="order-1">
             <Image
               src={data.middleSection.image}
               alt="Middle Section Image"
@@ -113,7 +113,7 @@ const App: React.FC = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-[20px] lg:py-[40px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center ">
           <div>
             <h3 className="text-xl md:text-2xl font-bold mb-4">
               {data.bottomSection.title}
@@ -133,7 +133,7 @@ const App: React.FC = () => {
           </div>
         </div>
         {/* Our Mission Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-[20px] lg:py-[40px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center ">
           <div>
             <svg
               xmlns={data.bottomSection.image}
@@ -154,7 +154,7 @@ const App: React.FC = () => {
       </div>
 
       {/* FORM SECTION */}
-      <div className="bg-gradient-to-t from-gray-900 to-transparent flex flex-col items-center justify-center p-4 font-inter">
+      <div className=" from-gray-900 to-transparent flex flex-col items-center justify-center p-4 font-inter">
         <div className="bg-transparent w-full">
           {/* Progress Stepper */}
 

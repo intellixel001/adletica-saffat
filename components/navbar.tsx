@@ -36,38 +36,24 @@ const App = () => {
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
           isScrolled
             ? "bg-white shadow-md text-gray-900"
-            : "bg-black/50 text-white"
+            : "bg-white text-[#0A2241]"
         }`}
       >
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center text-2xl font-extrabold">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="h-7 w-7 mr-2"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3 13.125l7.219-4.813m4.781 4.813L21 9.375m-11.219 4.813l4.781-4.813m-4.781 4.813V19.5m0-10.125V4.5"
-              />
-            </svg>
-            Adletica<sup className="text-sm font-normal ml-0.5">&reg;</sup>
+            <img className="w-[100px]" src="/image/images.png" alt="logo" />
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8 font-medium">
-            <Link href="/about" className="hover:text-blue-600 text-lg">
+            <Link href="/about" className="hover:text-[#FE4C4C] text-lg">
               Company
             </Link>
-            <Link href="/work" className="hover:text-blue-600 text-lg">
+            <Link href="/work" className="hover:text-[#FE4C4C] text-lg">
               Work
             </Link>
-            <Link href="/results" className="hover:text-blue-600 text-lg">
+            <Link href="/results" className="hover:text-[#FE4C4C] text-lg">
               Results
             </Link>
 
@@ -75,7 +61,7 @@ const App = () => {
             <div className="relative group">
               <Link
                 href={"/services"}
-                className="flex items-center space-x-1 text-lg hover:text-blue-600"
+                className="flex items-center space-x-1 text-lg hover:text-[#FE4C4C]"
               >
                 <span>Services</span>
                 <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
@@ -174,7 +160,7 @@ const App = () => {
               </div>
             </div>
 
-            <Link href="/blog" className="hover:text-blue-600 text-lg">
+            <Link href="/blog" className="hover:text-[#FE4C4C] text-lg">
               Blog
             </Link>
           </div>
@@ -183,7 +169,7 @@ const App = () => {
           <div className="hidden md:block">
             <Link
               href="/hire"
-              className="bg-blue-600 text-white px-6 py-2 rounded-full text-lg font-semibold hover:bg-blue-700 transition-all shadow-md"
+              className="bg-[#FE4C4C] text-white px-6 py-2 rounded-full text-lg font-semibold hover:bg-[#0A2241] transition-all shadow-md"
             >
               Hire us →
             </Link>

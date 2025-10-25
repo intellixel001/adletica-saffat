@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const roboto = Roboto({
   subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-roboto",
 });
 
 const geistMono = Geist_Mono({
@@ -12,7 +13,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// SEO metadata
 export const metadata: Metadata = {
   title: {
     default: "Adletica - Marketing That Fuels Growth",
@@ -58,13 +58,12 @@ import Footer from "../components/footer";
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <head>
-        {/* JSON-LD Structured Data for Organization */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -91,9 +90,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${roboto.variable} ${geistMono.variable} antialiased`}>
         <Navbar />
         {children}
         <Footer />
